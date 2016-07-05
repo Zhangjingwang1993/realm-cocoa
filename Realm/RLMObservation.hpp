@@ -21,6 +21,8 @@
 #import "binding_context.hpp"
 
 #import <realm/row.hpp>
+#import <realm/table.hpp>
+
 #import <unordered_map>
 
 @class RLMObjectBase, RLMRealm, RLMSchema, RLMProperty;

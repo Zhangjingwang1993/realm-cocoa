@@ -296,7 +296,7 @@ static id validatedObjectForProperty(id obj, RLMProperty *prop, RLMSchema *schem
     if (!_observationInfo) {
         _observationInfo = new RLMObservationInfo(self);
     }
-    _observationInfo->recordObserver(_row, _objectSchema, keyPath);
+    _observationInfo->recordObserver(_row, _info, keyPath);
 
     [super addObserver:observer forKeyPath:keyPath options:options context:context];
 }

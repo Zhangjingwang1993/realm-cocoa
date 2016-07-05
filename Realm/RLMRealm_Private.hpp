@@ -33,7 +33,7 @@ struct RLMObjectInfo;
 
 namespace std {
 template<> struct hash<NSString *> {
-    size_t operator()(__unsafe_unretained NSString *const str) {
+    size_t operator()(__unsafe_unretained NSString *const str) const {
         return [str hash];
     }
 };

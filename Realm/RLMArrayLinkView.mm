@@ -75,7 +75,7 @@ void RLMEnsureArrayObservationInfo(std::unique_ptr<RLMObservationInfo>& info,
     RLMValidateArrayObservationKey(keyPath, array);
     if (!info && array.class == [RLMArrayLinkView class]) {
         RLMArrayLinkView *lv = static_cast<RLMArrayLinkView *>(array);
-        info = std::make_unique<RLMObservationInfo>(lv->_ownerInfo,
+        info = std::make_unique<RLMObservationInfo>(*lv->_ownerInfo,
                                                     lv->_backingList.get_origin_row_index(),
                                                     observed);
     }
